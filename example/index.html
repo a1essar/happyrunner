@@ -1,0 +1,311 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>HappyRunner — menu hover follow mouse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"/>
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.4/styles/github.min.css"/>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <link rel="stylesheet" href="../happyrunner.min.css"/>
+    <link rel="stylesheet" href="example.css"/>
+
+    <script src="../jquery.happyrunner.min.js"></script>
+    
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:700,400,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+    <script>
+    $(function() {
+        $(".js__happyrunner-1").happyrunner({
+            fixedHeight: true
+        });
+        
+        $(".js__happyrunner-2").happyrunner();
+        
+        $(".js__happyrunner-3").happyrunner({
+            fixedWidth: true,
+            fixedHeight: true,
+            runnerCentering: 'horizontal'   
+        });
+        
+        $(".js__happyrunner-4").happyrunner();
+        
+        $(".js__happyrunner-5").happyrunner({
+            fixedWidth: true,
+            fixedHeight: true,
+            runnerCentering: 'vertical' 
+        });
+        
+        $(".js__happyrunner-6").happyrunner();
+        
+        $(".js__happyrunner-7").happyrunner({
+            fixedWidth: true,
+            fixedHeight: true,
+            runnerCentering: 'horizontal'   
+        });
+        
+        $(".js__happyrunner-8").happyrunner({
+            fixedHeight: true,
+            callback: function($el){
+                $('.js__callback').html('Animation complete. ' + $el.find('.js__happyrunner-link.hover').text() + ' is hover');
+            }
+        });
+    });   
+    </script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+        	<h1>HappyRunner</h1>
+        </div>
+        <p>HappyRunner &mdash; simple jQuery plugin to create a sliding runner for hover to menu</p>
+        
+        <div class="row">
+        	<div class="col-sm-4">
+                <h2>Features</h2>
+        		<ul class="list-unstyled">
+        			<li><span class="glyphicon glyphicon-thumbs-up"></span> Use css3 transition for best performance</li>
+                    <li><span class="glyphicon glyphicon-thumbs-up"></span> Simple customization using css</li>
+                    <li><span class="glyphicon glyphicon-thumbs-up"></span> Responsive</li>
+                    <li><span class="glyphicon glyphicon-thumbs-up"></span> ie9+, chrome, firefox, safari, mobile safari, android</li>
+   		            <li><span class="glyphicon glyphicon-thumbs-up"></span> jQuery animate for old browsers</li>
+                </ul>
+        	</div>
+            
+        	<div class="col-sm-4">
+                <h2>Examples</h2>
+        		<ul class="list-unstyled">
+        			<li><span class="glyphicon glyphicon-hand-right"></span>&nbsp;<a href="#example-1">Hover with line</a></li>
+                    <li><span class="glyphicon glyphicon-hand-right"></span>&nbsp;<a href="#example-2">Hover with background</a></li>
+                    <li><span class="glyphicon glyphicon-hand-right"></span>&nbsp;<a href="#example-3">Hover with fixed width and height</a></li>
+                    <li><span class="glyphicon glyphicon-hand-right"></span>&nbsp;<a href="#example-4">Vertical menu</a></li>
+                    <li><span class="glyphicon glyphicon-hand-right"></span>&nbsp;<a href="#example-5">Vertical menu with fixed height</a></li>
+                    <li><span class="glyphicon glyphicon-hand-right"></span>&nbsp;<a href="#example-6">Hover with different color</a></li>
+                    <li><span class="glyphicon glyphicon-hand-right"></span>&nbsp;<a href="#example-7">Hover with many runners</a></li>
+                    <li><span class="glyphicon glyphicon-hand-right"></span>&nbsp;<a href="#example-7">Callback function after animation complete</a></li>
+        		</ul>
+        	</div>
+        </div>   
+        
+        <h2>Usage</h2>
+        <p>HappyRunner requires jQuery and Modernizr to run. Download latest version of <a href="http://code.jquery.com/jquery-1.11.0.min.js" target="_blank">jQuery</a> and <a href="http://modernizr.com/downloads/modernizr-latest.js" target="_blank">Modernizr</a> and place them to your page.</p>
+        <p>Add HappyRunner to your page.</p>
+        <pre><code>&lt;link rel="stylesheet" href="happyrunner/happyrunner.css"/&gt;
+&lt;script src="happyrunner/jquery.happyrunner.min.js"&gt;&lt;/script&gt;</code></pre>
+        <p>Initialization HappyRunner plugin</p>
+        <pre><code>&lt;script&gt;
+$(function() {
+    $(".js__happyrunner").happyrunner({
+        fixedWidth: false, /* Use a fixed width for the runner */
+        fixedHeight: false, /* Use a fixed height for the runner */
+        outerWidth: true, /* Use a outer width element for calculation width the runner */
+        outerHeight: true, /* Use a outer height element for calculation height the runner */
+        runnerCentering: false, /* Centering runner relative element. Valid values: 'horizontal' and 'vertical', default: false */
+        animateDelay: 600, /* jQuery animate delay */
+        animateEasing: 'swing', /* jQuery easing  */
+        callback: function($el) { /* Callback function after animation complete */
+            
+        } 
+    });
+});   
+&lt;/script&gt;</code></pre>
+        <p>HTML</p>
+        <pre><code class="hljs xml">&lt;div class="js__happyrunner happyrunner-nav"&gt;
+    &lt;a class="js__happyrunner-link happyrunner-link active" href="#!"&gt;Item 1&lt;/a&gt;
+    &lt;a class="js__happyrunner-link happyrunner-link" href="#!"&gt;Item 2&lt;/a&gt;
+    ...
+    &lt;span class="js__happyrunner-runner happyrunner-runner"&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+        
+        <h3 id="example-1">Example 1 <small>hover with line</small></h3>
+        <nav class="js__happyrunner-1 happyrunner-nav happyrunner-example-1">
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-1-link active" href="#!">Item 1</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-1-link" href="#!">Item 2</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-1-link" href="#!">Item 3</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-1-link" href="#!">Another item 4</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-1-link" href="#!">Item 5</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-1-link" href="#!">Another long item 6</a>
+            <span class="js__happyrunner-runner happyrunner-runner happyrunner-example-1-runner"></span>
+        </nav>
+        
+        <pre><code>&lt;script&gt;
+$(function() {
+    $(".js__happyrunner").happyrunner({
+        fixedWidth: true /* Use a fixed width for the runner */
+    });
+});   
+&lt;/script&gt;</code></pre>
+        
+        <h3 id="example-2">Example 2 <small>hover with background</small></h3>
+        <nav class="js__happyrunner-2 happyrunner-nav happyrunner-example-2">
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-2-link active" href="#!">Item 1</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-2-link" href="#!">Item 2</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-2-link" href="#!">Item 3</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-2-link" href="#!">Another item 4</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-2-link" href="#!">Item 5</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-2-link" href="#!">Another long item 6</a>
+            <span class="js__happyrunner-runner happyrunner-runner happyrunner-example-2-runner"></span>
+        </nav>
+        
+        <pre><code>&lt;script&gt;
+$(function() {
+    $(".js__happyrunner").happyrunner();
+});   
+&lt;/script&gt;</code></pre>
+        
+        <h3 id="example-3">Example 3 <small>hover with fixed width and height</small></h3>
+        <nav class="js__happyrunner-3 happyrunner-nav happyrunner-example-3">
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-3-link active" href="#!">Item 1</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-3-link" href="#!">Item 2</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-3-link" href="#!">Item 3</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-3-link" href="#!">Another item 4</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-3-link" href="#!">Item 5</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-3-link" href="#!">Another long item 6</a>
+            <span class="js__happyrunner-runner happyrunner-runner happyrunner-example-3-runner"></span>
+        </nav>
+        
+        <pre><code>&lt;script&gt;
+$(function() {
+    $(".js__happyrunner").happyrunner({
+        fixedWidth: true, /* Use a fixed width for the runner */
+        fixedHeight: true, /* Use a fixed height for the runner */
+        runnerCentering: 'horizontal' /* Centering runner relative element. Valid values: 'horizontal' and 'vertical', default: false */ 
+    });
+});   
+&lt;/script&gt;</code></pre>
+        
+        <h3 id="example-4">Example 4 <small>vertical menu</small></h3>
+        <nav class="js__happyrunner-4 happyrunner-nav happyrunner-example-4">
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-4-link active" href="#!">Item 1</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-4-link" href="#!">Item 2</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-4-link" href="#!">Item 3</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-4-link" href="#!">Another item 4</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-4-link" href="#!">Item 5</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-4-link" href="#!">Another long item 6</a>
+            <span class="js__happyrunner-runner happyrunner-runner happyrunner-example-4-runner"></span>
+        </nav>
+        
+        <pre><code>&lt;script&gt;
+$(function() {
+    $(".js__happyrunner").happyrunner();   
+&lt;/script&gt;</code></pre>
+        
+        <h3 id="example-5">Example 5 <small>vertical menu with fixed height</small></h3>
+        <nav class="js__happyrunner-5 happyrunner-nav happyrunner-example-5">
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-5-link active" href="#!">Item 1</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-5-link" href="#!">Item 2</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-5-link" href="#!">Item 3</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-5-link" href="#!">Another item 4</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-5-link" href="#!">Item 5</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-5-link" href="#!">Another long item 6</a>
+            <span class="js__happyrunner-runner happyrunner-runner happyrunner-example-5-runner"></span>
+        </nav>
+
+        <pre><code>&lt;script&gt;
+$(function() {
+    $(".js__happyrunner").happyrunner({
+        fixedWidth: true, /* Use a fixed width for the runner */
+        fixedHeight: true, /* Use a fixed height for the runner */
+        runnerCentering: 'vertical' /* Centering runner relative element. Valid values: 'horizontal' and 'vertical', default: false */
+    });
+});   
+&lt;/script&gt;</code></pre>
+      
+        <h3 id="example-6">Example 6 <small>hover with different color</small></h3>
+        <nav class="js__happyrunner-6 happyrunner-nav happyrunner-example-6">
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-6-link active" href="#!" data-happyrunner-color="rgb(255, 77, 77)">Item 1</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-6-link" href="#!" data-happyrunner-color="rgb(77, 173, 255)">Item 2</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-6-link" href="#!" data-happyrunner-color="rgb(255, 77, 212)">Item 3</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-6-link" href="#!" data-happyrunner-color="rgb(77, 255, 241)">Another item 4</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-6-link" href="#!" data-happyrunner-color="rgb(113, 255, 77)">Item 5</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-6-link" href="#!" data-happyrunner-color="rgb(255, 227, 77)">Another long item 6</a>
+            <span class="js__happyrunner-runner happyrunner-runner happyrunner-example-6-runner"></span>
+        </nav>
+        
+        <pre><code class="hljs xml">&lt;div class="js__happyrunner happyrunner-nav"&gt;
+    &lt;a class="js__happyrunner-link happyrunner-link active" href="#!" data-happyrunner-color="rgb(77, 173, 255)"&gt;Item 1&lt;/a&gt;
+    &lt;a class="js__happyrunner-link happyrunner-link" href="#!" data-happyrunner-color="rgb(255, 77, 77)"&gt;Item 2&lt;/a&gt;
+    ...
+    &lt;span class="js__happyrunner-runner happyrunner-runner"&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+        
+        <pre><code>&lt;script&gt;
+$(function() {
+    $(".js__happyrunner").happyrunner();
+});   
+&lt;/script&gt;</code></pre>
+        
+        <h3 id="example-7">Example 7 <small>hover with many runners</small></h3>
+        <nav class="js__happyrunner-7 happyrunner-nav happyrunner-example-7">
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-7-link active" href="#!">Item 1</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-7-link" href="#!">Item 2</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-7-link" href="#!">Item 3</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-7-link" href="#!">Another item 4</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-7-link" href="#!">Item 5</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-7-link" href="#!">Another long item 6</a>
+            <span class="js__happyrunner-runner happyrunner-runner happyrunner-example-7-runner-top"></span>
+            <span class="js__happyrunner-runner happyrunner-runner happyrunner-example-7-runner-bottom"></span>
+        </nav>
+        
+        <pre><code class="hljs xml">&lt;div class="js__happyrunner happyrunner-nav"&gt;
+    &lt;a class="js__happyrunner-link happyrunner-link active" href="#!"&gt;Item 1&lt;/a&gt;
+    &lt;a class="js__happyrunner-link happyrunner-link" href="#!"&gt;Item 2&lt;/a&gt;
+    ...
+    &lt;span class="js__happyrunner-runner happyrunner-runner"&gt;&lt;/span&gt;
+    &lt;span class="js__happyrunner-runner happyrunner-runner"&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+        
+        <pre><code>&lt;script&gt;
+$(function() {
+    $(".js__happyrunner").happyrunner({
+        fixedWidth: true, /* Use a fixed width for the runner */
+        fixedHeight: true, /* Use a fixed height for the runner */
+        runnerCentering: 'horizontal' /* Centering runner relative element. Valid values: 'horizontal' and 'vertical', default: false */
+    });
+});   
+&lt;/script&gt;</code></pre>
+        
+        <h3 id="example-8">Example 8 <small>callback after animation complete</small></h3>
+        <div class="js__callback"></div>
+        <nav class="js__happyrunner-8 happyrunner-nav happyrunner-example-1">
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-1-link active" href="#!">Item 1</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-1-link" href="#!">Item 2</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-1-link" href="#!">Item 3</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-1-link" href="#!">Another item 4</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-1-link" href="#!">Item 5</a>
+            <a class="js__happyrunner-link happyrunner-link happyrunner-example-1-link" href="#!">Another long item 6</a>
+            <span class="js__happyrunner-runner happyrunner-runner happyrunner-example-1-runner"></span>
+        </nav>
+    
+        <pre><code>&lt;script&gt;
+$(function() {
+    $(".js__happyrunner").happyrunner({
+        fixedHeight: true, /* Use a fixed height for the runner */
+        callback: function($el) { /* Callback function after animation complete */
+            $('.js__callback').html('Animation complete. ' + $el.find('.js__happyrunner-link.hover').text() + ' is hover');
+        } 
+    });
+});   
+&lt;/script&gt;</code></pre>
+    
+        <hr />
+        <p>&copy; <a href="http://happycms.ru/">happycms.ru</a></p>
+    </div>
+    <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter23743090 = new Ya.Metrika({id:23743090, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/23743090" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+</body>
+</html>

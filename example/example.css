@@ -1,0 +1,280 @@
+body{
+    background: rgb(255, 255, 255);
+}
+    
+/* example-1 */
+.happyrunner-example-1{
+    position: relative;
+    text-align: center;
+    border-right: 2px solid #428bca;
+    border-left: 2px solid #428bca;
+    margin: 30px auto;
+}
+
+.happyrunner-example-1-link{
+    display: inline-block;
+    text-transform: uppercase;
+    font: normal normal normal 18px/1em 'PT Sans';
+    margin: 10px 20px;
+
+    -webkit-transition: all 0.3s ease; 
+    -moz-transition: all 0.3s ease; 
+    -o-transition: all 0.3s ease; 
+    transition: all 0.3s ease; 
+}
+
+.happyrunner-example-1-link:hover{
+    text-decoration: none;
+}
+
+.happyrunner-example-1-runner{
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #428bca    
+}
+
+/* example-2 */
+.happyrunner-example-2{
+    position: relative;
+    text-align: center;
+    border-right: 2px solid #428bca;
+    border-left: 2px solid #428bca;
+    margin: 30px auto;
+}
+
+.happyrunner-example-2-link{
+    display: inline-block;
+    text-transform: uppercase;
+    font: normal normal normal 18px/1em 'PT Sans';
+    margin: 10px 20px;
+    
+    -webkit-transition: all 0.9s ease-in-out; 
+    -moz-transition: all 0.9s ease-in-out; 
+    -o-transition: all 0.9s ease-in-out; 
+    transition: all 0.9s ease-in-out; 
+}
+
+.happyrunner-example-2-link:hover,
+.happyrunner-example-2-link.hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.happyrunner-example-2-runner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #428bca;
+    border-radius: 9px; 
+    -webkit-border-radius: 9px; 
+}
+
+/* example-3 */
+.happyrunner-example-3{
+    position: relative;
+    text-align: center;
+    border-top: 2px solid #428bca;
+    margin: 30px auto;
+    padding: 10px 0;
+}
+
+.happyrunner-example-3-link{
+    display: inline-block;
+    text-transform: uppercase;
+    font: normal normal normal 18px/1em 'PT Sans';
+    margin: 10px 20px;
+    
+    -webkit-transition: all 0.9s ease-in-out; 
+    -moz-transition: all 0.9s ease-in-out; 
+    -o-transition: all 0.9s ease-in-out; 
+    transition: all 0.9s ease-in-out; 
+}
+
+.happyrunner-example-3-link:hover,
+.happyrunner-example-3-link.hover{
+    text-decoration: none;
+}
+
+.happyrunner-example-3-runner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 9px 9px 0 9px;
+    border-color: #428bca transparent transparent transparent;
+}
+
+/* example-4 */
+.happyrunner-example-4{
+    position: relative;
+    width: 300px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.happyrunner-example-4-link{
+    display: block;
+    text-transform: uppercase;
+    font: normal normal normal 18px/1em 'PT Sans';
+    border-bottom: 2px solid #428bca;
+    padding: 10px;
+    margin: 0;
+    
+    -webkit-transition: all 0.9s ease-in-out;
+    -moz-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    transition: all 0.9s ease-in-out;
+}
+
+.happyrunner-example-4-link:nth-last-child(1){
+    border: 0;
+}
+
+.happyrunner-example-4-link:hover,
+.happyrunner-example-4-link.hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.happyrunner-example-4-runner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #428bca; 
+}
+
+/* example-5 */
+.happyrunner-example-5{
+    position: relative;
+    width: 300px;
+    text-align: left;
+    border-left: 2px solid #428bca;
+    padding: 0 0 0 10px;
+    margin: 30px 0;
+}
+
+.happyrunner-example-5-link{
+    display: block;
+    text-transform: uppercase;
+    font: normal normal normal 18px/1em 'PT Sans';
+    padding: 10px;
+    margin: 0;
+    
+    -webkit-transition: all 0.9s ease-in-out;
+    -moz-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    transition: all 0.9s ease-in-out;
+}
+
+.happyrunner-example-5-link:hover,
+.happyrunner-example-5-link.hover{
+    text-decoration: none;
+}
+
+.happyrunner-example-5-runner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 9px 0 9px 9px;
+    border-color: transparent transparent transparent #428bca;
+}
+
+/* example-6 */
+.happyrunner-example-6{
+    position: relative;
+    text-align: center;
+    border-right: 2px solid #428bca;
+    border-left: 2px solid #428bca;
+    margin: 30px auto;
+}
+
+.happyrunner-example-6-link{
+    display: inline-block;
+    text-transform: uppercase;
+    font: normal normal normal 18px/1em 'PT Sans';
+    margin: 10px 20px;
+    
+    -webkit-transition: all 0.9s ease-in-out; 
+    -moz-transition: all 0.9s ease-in-out; 
+    -o-transition: all 0.9s ease-in-out; 
+    transition: all 0.9s ease-in-out; 
+}
+
+.happyrunner-example-6-link:hover,
+.happyrunner-example-6-link.hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.happyrunner-example-6-runner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #428bca;
+    border-radius: 9px; 
+    -webkit-border-radius: 9px; 
+}
+
+/* example-7 */
+.happyrunner-example-7{
+    position: relative;
+    text-align: center;
+    border-top: 2px solid #428bca;
+    border-bottom: 2px solid #428bca;
+    margin: 30px auto;
+    padding: 10px 0;
+}
+
+.happyrunner-example-7-link{
+    display: inline-block;
+    text-transform: uppercase;
+    font: normal normal normal 18px/1em 'PT Sans';
+    margin: 10px 20px;
+    
+    -webkit-transition: all 0.9s ease-in-out; 
+    -moz-transition: all 0.9s ease-in-out; 
+    -o-transition: all 0.9s ease-in-out; 
+    transition: all 0.9s ease-in-out; 
+}
+
+.happyrunner-example-7-link:hover,
+.happyrunner-example-7-link.hover{
+    text-decoration: none;
+}
+
+.happyrunner-example-7-runner-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 9px 9px 0 9px;
+    border-color: #428bca transparent transparent transparent;
+}
+
+.happyrunner-example-7-runner-bottom{
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 9px 9px 9px;
+    border-color: transparent transparent #428bca transparent;
+}

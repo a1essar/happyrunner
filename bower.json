@@ -1,0 +1,34 @@
+{
+  "name": "happyrunner",
+  "description": "",
+  "version": "1.0.0",
+  "keywords": [
+      "css",
+      "js",
+      "front-end"
+  ],
+  "homepage": "https://github.com/a1essar/happyrunner",
+  "main": [
+      "jquery.happyrunner.min.js",
+      "jquery.happyrunner.min.js.map",
+      "happyrunner.min.css",
+      "happyrunner.min.css.map",
+      "src/happyrunner.css",
+      "src/jquery.happyrunner.js"
+  ],
+  "ignore": [
+    "src",
+    "example",
+    "/.*",
+    "CNAME",
+    "CONTRIBUTING.md",
+    "docs",
+    "bower.json",
+    "gulpfile.js",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "jquery": ">= 2.1.1"
+  }
+}
