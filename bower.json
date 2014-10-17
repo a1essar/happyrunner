@@ -8,14 +8,7 @@
       "front-end"
   ],
   "homepage": "https://github.com/a1essar/happyrunner",
-  "main": [
-      "jquery.happyrunner.min.js",
-      "jquery.happyrunner.min.js.map",
-      "happyrunner.min.css",
-      "happyrunner.min.css.map",
-      "src/happyrunner.css",
-      "src/jquery.happyrunner.js"
-  ],
+
   "ignore": [
     "src",
     "example",
