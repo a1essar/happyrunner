@@ -10,7 +10,6 @@
   "homepage": "https://github.com/a1essar/happyrunner",
 
   "ignore": [
-    "src",
     "example",
     "/.*",
     "CNAME",
